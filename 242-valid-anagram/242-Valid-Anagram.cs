@@ -1,13 +1,15 @@
 public class Solution {
     public bool IsAnagram(string s, string t) {
+       if (s.Length == t.Length) 
+       {
+          string x = String.Concat(s.OrderBy(c => c));  
+          string y = String.Concat(t.OrderBy(c => c));  
 
-        string sorted_s = new string(s.OrderBy(c => c).ToArray());
-        string sorted_t = new string(t.OrderBy(c => c).ToArray());
-
-        if (sorted_s != sorted_t){
-            return false;
-        }
-        else return true;
-        
+            if(x==y)
+            {
+                return true;
+            }
+       }
+       return false;
     }
 }
