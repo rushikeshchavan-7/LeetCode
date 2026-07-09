@@ -1,13 +1,14 @@
 public class Solution {
     public bool ContainsDuplicate(int[] nums) {
-        nums.Sort();
-        for (int i = 1; i<nums.Length; i++)
+        for (int i = 0; i<nums.Length; i++)
         {
-            if (nums[i]==nums[i-1])
+            for (int j = i+1; j<nums.Length; j++)
             {
-                return true;
+                if (nums[i] == nums[j])
+                {
+                    return true;
+                }
             }
-           
         }
         return false;
     }
