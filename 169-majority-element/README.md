@@ -2,7 +2,7 @@
 
 🟢 **Easy** &nbsp;|&nbsp; [View on LeetCode](https://leetcode.com/problems/majority-element/)
 
-**Topics:** Array, Hash Table, Divide and Conquer, Sorting, Counting
+**Topics:** Array, Hash Table, Divide and Conquer, Sorting, Counting, Boyer–Moore Majority Vote Algorithm
 
 ---
 
