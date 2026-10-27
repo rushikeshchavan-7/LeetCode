@@ -1,15 +1,19 @@
 public class Solution {
     public bool IsAnagram(string s, string t) {
-       if (s.Length == t.Length) 
-       {
-          string x = String.Concat(s.OrderBy(c => c));  
-          string y = String.Concat(t.OrderBy(c => c));  
+        if (s.Length != t.Length) {return false;}
 
-            if(x==y)
-            {
-                return true;
-            }
-       }
-       return false;
+        var trackker = new int [26];
+
+        for(int i = 0; i <s.Length; i++)
+        {
+            trackker[s[i] - 'a']++;
+            trackker[t[i] - 'a']--;
+        }
+
+        for(int i = 0; i < 26; i++)
+        {
+            if(trackker[i]!=0) {return false;}
+        }
+        return true;
     }
 }
